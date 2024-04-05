@@ -33,3 +33,9 @@ console.log("1" + 2 + 2);
 console.log(1 + 2 + "2");
 console.log((3 + 4) * 5 % 3);
 
+//primitive {copy the value and do changes in copy}
+//7 types -> string, no, boolean, null, undefined, symbol, bigInt
+
+//reference {non primitive}
+//arrays, objects, functions
+
