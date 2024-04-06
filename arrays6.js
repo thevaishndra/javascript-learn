@@ -14,13 +14,20 @@ const cartoon = ['jerry', 'platypus', 'spongebob', 'oswald', 'doraemon'];
 // console.log(myArr.join());//converts into string
 
 //slice, splice
-console.log("A", myArr);
+// console.log("A", myArr);
 const myn1 = myArr.slice(1,3);
-console.log(myn1);//it does't includes last range
-console.log("B", myArr);//no change to original array
+// console.log(myn1);//it does't includes last range
+// console.log("B", myArr);//no change to original array
 
 const myn2 = myArr.splice(1,3);
-console.log(myn2);//it includes last range
-console.log("C", myArr);//original array changes to only element not included
+// console.log(myn2);//it includes last range
+// console.log("C", myArr);//original array changes to only element not included
 
+const time = ['dawn', 'afternoon', 'dusk', 'twilight', 'night'];
+const ways = ['airways', 'roadways', 'waterways', 'highways'];
+// time.push(ways);
+// console.log(time);
+ const timeWays =time.concat(ways);
+//  console.log(timeWays);
 
+// some more methods -> flatArray, isArray, from, of
