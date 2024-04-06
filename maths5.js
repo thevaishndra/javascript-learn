@@ -24,6 +24,7 @@ const max =20;
 // console.log((Math.random()*(max-min +1)+min));
 //for a specific range value
 
+
 // ********************* date and time ***********************
 let myDate = new Date();
 // console.log(myDate.toString());//date, day, time, gmt ist 16: 49: 46 GMT+0530
