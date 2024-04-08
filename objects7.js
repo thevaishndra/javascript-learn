@@ -89,3 +89,10 @@ const course = {
 //course.courseInstructor
 const {courseInstructor: instructor} = course//another syntax
 console.log(instructor);//shortening the name of key
+
+//json syntax
+// {
+//     "name" : "Vaishnavi",
+//     "coursename" : "frontend",
+//     "price" : "free"
+// }
