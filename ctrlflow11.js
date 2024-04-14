@@ -48,29 +48,69 @@ const loggedInfromEmail = false;
 
 //switch
 const day = 6;
-switch (day) {
-    case 1:
-        console.log("mon");
-        break;
-    case 2:
-        console.log("tue");
-        break;
-    case 3:
-        console.log("wed");
-        break;
-    case 4:
-        console.log("thu");
-        break;
-    case 5:
-        console.log("fri");
-        break;
-    case 6:
-        console.log("sat");
-        break;
-    case 7:
-        console.log("sun");
-        break;
-    default:
-        console.log("enter a valid day")
-        break;
+// switch (day) {
+//     case 1:
+//         console.log("mon");
+//         break;
+//     case 2:
+//         console.log("tue");
+//         break;
+//     case 3:
+//         console.log("wed");
+//         break;
+//     case 4:
+//         console.log("thu");
+//         break;
+//     case 5:
+//         console.log("fri");
+//         break;
+//     case 6:
+//         console.log("sat");
+//         break;
+//     case 7:
+//         console.log("sun");
+//         break;
+//     default:
+//         console.log("enter a valid day")
+//         break;
+// }
+
+// const userEmail = "vaish@123";//true
+// const userEmail = [];//true
+const userEmail = "";//false
+// if(userEmail){
+//     console.log("got user email");
+// } else{
+//     console.log("don't have user email");
+// }
+
+//falsy values => false, 0, -0, BigInt, 0n, "", null, undefined, NaN(not a no.)
+//truthsy values => "0", 'false', " ", [], {}, func(){}
+
+// if (userEmail.length === 0) {//to check if array is empty 
+//     console.log("array is empty");    
+// }
+
+const emptyObj = {};
+if (Object.keys(emptyObj).length === 0) {//to check if object is empty
+    console.log("Object is empty");
 }
+
+//false == 0,
+//false == '';
+//0 == ''
+//these are all true values
+
+//Nullish Coalescing Operator(??):null, undefined
+//to avoid disturbance in code because of undetermined values
+//how to handle errors and assign values
+//it takes the safety value or null or undefined
+ let val1 = 5 ?? 10;//5
+let val2 = null ?? 10;//10
+let val3 = undefined ?? 10 ?? 15;//the first value ie, 10 gets printed
+// console.log(val3);
+
+//Ternary Operator
+// condition ? true : false;
+const iceTeaPrice = 50;
+iceTeaPrice <= 25 ? console.log("less than 25"): console.log("more than 25")
