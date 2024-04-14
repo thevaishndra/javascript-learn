@@ -1,4 +1,4 @@
-//for
+//for loop
 // for (let i = 0; i <= 10; i++) {
 //     const element = i;
 //     if (element == 5) {
@@ -22,12 +22,47 @@ let murakami = ['norwegian woods', 'sputnik sweetheart', 'kafka on shore'];
 //     console.log(bookName);
 // }
 
-//break
-for (let i = 0; i <= 10; i++) {
-    if (i == 5) {
-        console.log(`5 detected`);
-        // break;//it stops the iteration
-        continue;//ignore and move forward
-    }
-    console.log(`value of i is ${i}`);
+//break & continue
+// for (let i = 0; i <= 10; i++) {
+//     if (i == 5) {
+//         console.log(`5 detected`);
+//         // break;//it stops the iteration
+//         continue;//ignore and move forward
+//     }
+//     console.log(`value of i is ${i}`);
+// }
+
+
+//while loop
+let index = 0;
+// while (index <= 10){
+//     console.log(`value of index is ${index}`);
+//     index = index + 2;
+// }
+
+let kdrama = ['queen of tears', 'my lovely runner', 'love to hate you'];
+let arr = 0;//accessing elements from arrays using loop
+// while (arr < kdrama.length){
+//     console.log(`currently watching ${kdrama[arr]}`);
+//     arr = arr+1;
+// }
+
+
+
+//do while
+let score = 11;//it runs atleast once
+// do{
+//     console.log(`score is ${score}`);//code runs line by line
+//     score++;
+// }while (score <= 10);//condition gets applied at last
+
+
+//for of loop { loops for array[], objects{}}
+const array = [1, 2, 3, 4, 5];
+for (const num of array){
+    console.log(num);
+}
+const greetings = "Hello world!";
+for (const greet of greetings){
+    
 }
