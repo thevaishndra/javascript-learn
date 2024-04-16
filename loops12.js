@@ -58,11 +58,37 @@ let score = 11;//it runs atleast once
 
 
 //for of loop { loops for array[], objects{}}
-const array = [1, 2, 3, 4, 5];
-for (const num of array){
-    console.log(num);
-}
+// const array = [1, 2, 3, 4, 5];
+// for (const num of array){
+//     console.log(num);
+// }
 const greetings = "Hello world!";
-for (const greet of greetings){
-    
+// for (const greet of greetings){
+//     console.log(`each char is ${greet}`);
+// }
+
+
+//maps => it holds key value pairs and remembers original insertion order of keys
+const map = new Map();
+map.set('IN', "India");
+map.set('USA', "United States Of America");
+map.set('SP', "Spain");
+// console.log(map);
+// for (const [key, value] of map){//to get the values  and key instead of array we put them in square brackets
+//     console.log(key, ":-", value);
+// }
+
+const myObject = {
+    game1 : "amongus",
+    game2 : "nintendo"
+}
+// for (const [key, value] of myObject){
+//     console.log(key, ":-", value);//for of loop doesnt works on object
+// }
+
+
+//for in loop {is not bound to work only on objects}
+for (const key in myObject){
+    // console.log(myObject[key]);//way to print key
+    console.log(`${key} is ${myObject[key]}`);
 }
