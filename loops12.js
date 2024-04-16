@@ -94,8 +94,71 @@ for (const key in myObject){
     // console.log(`${key} is ${myObject[key]}`);
 }
 
-const programming = ["js", "python", "cpp", "java"];
-for (const key in programming){
-    // console.log(key);//0, 1, 2, 3
-    console.log(programming[key]);
+ const programming = ["js", "python", "cpp", "java"];
+ for (const key in programming){
+     // console.log(key);//0, 1, 2, 3
+//     console.log(programming[key]);
 }
+
+//CALL BACK FUNCTIONs {below all are using callback func}
+const colors = ["blue", "white", "black"];
+// colors.forEach ( function (item) {//arrayname.foreach (function (value name-anything){do work});
+//     console.log(item);
+// }); 
+
+// colors.forEach( (value) => {//writing call back func as arrow func
+//     console.log(value);
+// });
+
+
+//print me func lets us print something
+// function printMe(item){
+//     console.log(item);
+// }
+// colors.forEach(printMe);//dont execute give reference
+
+
+//info of full array
+// colors.forEach( (item, index, arr) => {
+//     console.log(item, index, arr);
+// });
+
+
+//objects in array
+const myPlanets = [
+    {
+        planetName: "Earth",
+        planetNo: 3
+    },
+    {
+        planetName: "Saturn",
+        planetNo: 6
+    },
+    {
+        planetName: "Neptune",
+        planetNo: 8
+    }
+]
+myPlanets.forEach( (item) => {
+    console.log(item.planetName);
+});
+
+//for each loop doesn't return any valueit shows undefined
+
+//FILTER
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const newNums = myNums.filter( (num) => num > 4);//returns a value unlike for each
+// console.log(newNums);//in arrow func write return num > 4 inside curly braces to get value
+//as it returns empty array by default, so implicitly we get value by writing return
+
+// const newNums = [];
+// myNums.forEach( (num) => {//by using for each
+//     if (num > 4){
+//         newNums.push(num);
+//     }
+// });
+// console.log(newNums);
+
+const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const newNums = myNumbers.map( (num) => num + 10);
+console.log(newNums); 
