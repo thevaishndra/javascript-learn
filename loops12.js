@@ -57,7 +57,7 @@ let score = 11;//it runs atleast once
 // }while (score <= 10);//condition gets applied at last
 
 
-//for of loop { loops for array[], objects{}}
+//FOR OF LOOP { loops for array[]**, objects{}}
 // const array = [1, 2, 3, 4, 5];
 // for (const num of array){
 //     console.log(num);
@@ -69,6 +69,7 @@ const greetings = "Hello world!";
 
 
 //maps => it holds key value pairs and remembers original insertion order of keys
+//maps are not iteratables, we cant use for in loop here
 const map = new Map();
 map.set('IN', "India");
 map.set('USA', "United States Of America");
@@ -87,8 +88,14 @@ const myObject = {
 // }
 
 
-//for in loop {is not bound to work only on objects}
+//FOR IN LOOP {is not bound to work only on objects}
 for (const key in myObject){
     // console.log(myObject[key]);//way to print key
-    console.log(`${key} is ${myObject[key]}`);
+    // console.log(`${key} is ${myObject[key]}`);
+}
+
+const programming = ["js", "python", "cpp", "java"];
+for (const key in programming){
+    // console.log(key);//0, 1, 2, 3
+    console.log(programming[key]);
 }
