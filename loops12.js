@@ -140,7 +140,7 @@ const myPlanets = [
     }
 ]
 myPlanets.forEach( (item) => {
-    console.log(item.planetName);
+    // console.log(item.planetName);
 });
 
 //for each loop doesn't return any valueit shows undefined
@@ -160,5 +160,40 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // console.log(newNums);
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const newNums = myNumbers.map( (num) => num + 10);
-console.log(newNums); 
+// const newNums = myNumbers.map( (num) => num + 10);
+// console.log(newNums); 
+// const newNums = myNumbers
+// .map( (num) => num*10)//10, 20, 30...
+// .map( (num) => num+1)//11, 21, 31...
+// .filter( (num) => num >= 40)//41, 51, 61...
+// console.log(newNums); 
+
+
+//REDUCE -> executes user supplied reducer callback function on each element of array
+//final sum which is accumulator+ current value
+//final sum goes in accumulator + current value
+//initially accumulator doesnt have a value as there is no sum, hence it takes initial value
+const numbers = [1, 2, 3];
+// const myTotal = numbers.reduce (function (acc, currval){
+//     console.log(`accumulator: ${acc} and current value: ${currval}`);
+//     return acc + currval;
+// }, 0);//we gave initial value as 0
+const myTotal = numbers.reduce( (acc, curr) => acc + curr, 0);//in arrow function same code
+// console.log(myTotal);
+
+const shoppingCart = [
+    {
+        item: "broccoli",
+        price: 150
+    },
+    {
+        item: "orange",
+        price: 130
+    },
+    {
+        item: "oil pastels",
+        price: 270
+    },
+]
+const totalBill= shoppingCart.reduce( (acc, item) => acc + item.price, 0);//in complex we check are they numbers or strings
+console.log(totalBill);
