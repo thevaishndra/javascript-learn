@@ -23,3 +23,9 @@
 //tempLiList.forEach( function(l) {
 //  length.style.backgroundColor = "green"
 //})
+
+//document.getElementsByClassName('list-items');
+//Array.from(tempClassList);//converts into array
+//tempClassList.forEach(function(Li){
+//    li.style.color = "orange"
+//});
