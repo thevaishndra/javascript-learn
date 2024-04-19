@@ -1,0 +1,36 @@
+html {
+    margin:0;
+}
+
+span {
+    display:block;/*has a line break, takes full space*/
+}
+
+.canvas{
+    margin: 100px 100px;
+    width:80%;
+    text-align:center;
+}
+
+.button{
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;/*doesn't have a line-break, takes necessary space*/
+}
+
+#blue{
+    background: blue;
+}
+
+#yellow{
+    background: yellow;
+}
+
+#red{
+    background:red;
+}
+
+#green{
+    background: green;
+}
