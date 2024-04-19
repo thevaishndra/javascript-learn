@@ -1,0 +1,40 @@
+.container {
+    height: 825px;
+    width: 575px;
+    background-color: rgb(197, 151, 246);
+    padding-left : 30px
+}
+
+h1{
+    padding-left: 15px;
+    padding-top: 25px;
+}
+
+#height, #weight {
+    width : 150px;
+    height: 25px;
+    margin-top: 30px;
+}
+
+button{
+    width: 140px;
+    height: 25px;
+    margin-left: 90px;
+    margin-top : 25px;
+    background-color: #fff;
+    color:#000;
+    padding: 1px 30px;
+    border-radius: 5px;
+    border: 2px solid black
+}
+#weight-guide {
+    margin-left: 75px;
+    margin-top: 25px
+}
+
+#results{
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: #000;
+}
