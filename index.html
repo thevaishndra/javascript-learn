@@ -73,12 +73,34 @@
         // div.appendChild(addText);
         // document.body.appendChild(div);
 
-        function addLanguage(langName){
+        //add elements
+        function addLanguage(langName){//less optimized approach
             const li= document.createElement('li');
-            li.innerHTML= `${langName}`;
+            li.innerHTML= `${langName}`;//using innerHTML means traversing all the elements
             document.querySelector('.language').appendChild(li);
         }
         addLanguage("python");
         addLanguage("typescript");
+
+        function addOptiLang (langName){//more optimized approach
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));//focus more on appendChild
+            document.querySelector('.language').appendChild(li);
+        }
+        addOptiLang("nodejs");
+
+        //edit elements
+        const secondLang = document.querySelector("li:nth-child(2)");
+        // secondLang.innerHTML = "hehe";
+        const newLi = document.createElement('li');
+        newLi.textContent = "lala";
+        secondLang.replaceWith(newLi);
+
+        const firstLang = document.querySelector("li:first-child");
+        firstLang.outerHTML = "<li>ohoh</li>"
+
+        //remove
+        const lastLang = document.querySelector("li:last-child");
+        lastLang.remove();
     </script>
 </html>
