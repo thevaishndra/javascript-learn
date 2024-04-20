@@ -5,13 +5,17 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 //selecting height, it's in string
     const height = parseInt(document.querySelector('#height').value);//parseInt converts string into integer type
-    const weight = parseInt(document.querySelector('#weight',value));//dont write this above form as it will take empty values as soon as the file is opened
+    const weight = parseInt(document.querySelector('#weight').value);//dont write this above form as it will take empty values as soon as the file is opened
     const results = document.querySelector('#results');
 
     if(height === '' || height < 0 || isNaN(height)){
         results.innerHTML = `Please give a valid height ${height}`;
     }
-    if(weight === '' || weight < 0 || isNaN(weight)){
+    else if(weight === '' || weight < 0 || isNaN(weight)){
         results.innerHTML = `Please give a valid weight ${weight}`;
+    }
+    else{
+        const bmi = (weight/((height*height)/10000)).toFixed(2);
+        results.innerHTML = `<span>${bmi}</span>`;
     }
 })
