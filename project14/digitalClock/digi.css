@@ -11,6 +11,10 @@ body {
     flex-direction: column;
 }
 
+#banner{
+    font-size: 30px;
+}
+
 #clock {
     font-size: 40px;
     background-color: #EDE7E3;
