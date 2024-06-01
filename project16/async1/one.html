@@ -6,11 +6,27 @@
     <title>NOT A PROJECT</title>
 </head>
 <body>
-    <!-- Here we are trying to understand setTimeout func. NOT A PROJECT -->
+    <!-- Here we are trying to understand setInterval func. NOT A PROJECT -->
     <h1>Rockstar</h1>
+        <button id="start">Start</button>
         <button id="stop">Stop</button>
 </body>
 </html>
 <script>
-  
+    const sayDate= function(str){
+        console.log(str, Date.now());
+    }
+    const intervalId = function(){
+        setInterval(sayDate, 1000, "hi");
+    }
+  document.querySelector('#start').addEventListener('click', function(){
+    intervalId();
+    console.log("start");
+  });
+
+  document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(intervalId);
+    console.log("stop");
+  });
+
 </script>

@@ -19,12 +19,12 @@
         console.log("Vaishnavi");
     }
     const changeText = function(){
-        document.querySelector('h1').innerHTML = "learning JS"
+        document.querySelector('h1').innerHTML = "learning JS";
     }
     const changeMe = setTimeout(changeText,2000);//by passing reference
 
     document.querySelector('#stop').addEventListener('click', function(){
         clearTimeout(changeMe);
         console.log("STOPPED");
-    })
+    });
 </script>
