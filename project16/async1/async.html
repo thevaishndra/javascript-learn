@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOT A PROJECT</title>
+</head>
+<body>
+    <!-- Here we are trying to understand setTimeout func. NOT A PROJECT -->
+    <h1>The Vaishndra</h1>
+        <button id="stop">Stop</button>
+</body>
+</html>
+<script>
+    // setTimeout(function(){//setTimeout does the work only once
+    //     console.log("Vaishnavi");//setInterval does the work repeatedly till a given interval
+    // }, 2000)//it prints after 2000 = 2 sec
+    const sayVaishnavi = function(){
+        console.log("Vaishnavi");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "learning JS"
+    }
+    const changeMe = setTimeout(changeText,2000);//by passing reference
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+    })
+</script>
