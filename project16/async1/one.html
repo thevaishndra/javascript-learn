@@ -13,20 +13,20 @@
 </body>
 </html>
 <script>
-    const sayDate= function(str){
-        console.log(str, Date.now());
-    }
-    const intervalId = function(){
-        setInterval(sayDate, 1000, "hi");
-    }
-  document.querySelector('#start').addEventListener('click', function(){
-    intervalId();
-    console.log("start");
-  });
+//     const sayDate= function(str){
+//         console.log(str, Date.now());
+//     }
+//     const intervalId = function(){
+//         setInterval(sayDate, 1000, "hi");
+//     }
+//   document.querySelector('#start').addEventListener('click', function(){
+//     intervalId();
+//     console.log("start");//when we press start, it starts printing
+//   });
 
-  document.querySelector('#stop').addEventListener('click', function(){
-    clearInterval(intervalId);
-    console.log("stop");
-  });
+//   document.querySelector('#stop').addEventListener('click', function(){
+//     clearInterval(intervalId);
+//     console.log("stop");//when we stop it gets stopped but it starts reprinting idk y?
+//   });
 
 </script>
