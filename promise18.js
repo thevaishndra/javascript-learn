@@ -49,3 +49,20 @@ const username = promiseFour.then((user) => {
 }).catch(function(error){
     console.log(error);
 }).finally(() => console.log("Then promise is either resolved or rejected"));
+
+const promiseFive = new Promise (function(resolve, reject){
+    setTimeout(function(){
+        let error = true;
+        if (!error){
+            resolve({username: "chandra", password: "aaaa"});
+        }
+        else{
+            reject('ERROR:Js went wrong');
+        }
+    },1000);
+});
+//we can also use async await syngtax insteaad of .then
+async function consumePromiseFive(){
+    const response = await promiseFive
+    console.log(response);
+}
