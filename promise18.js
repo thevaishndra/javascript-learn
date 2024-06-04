@@ -12,6 +12,7 @@ promiseOne.then(function(){
     console.log("promise consumed");
 });
 
+//using different kinds of syntax for writing promises 
 new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log('async task 2 is completed');
@@ -61,8 +62,36 @@ const promiseFive = new Promise (function(resolve, reject){
         }
     },1000);
 });
-//we can also use async await syngtax insteaad of .then
+//we can also use async await syngax insteaad of .then
 async function consumePromiseFive(){
-    const response = await promiseFive
+    try {
+        const response = await promiseFive
     console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
 }
+consumePromiseFive();
+
+
+//try and catch syntax 
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch ('https://jsonplaceholder.typicode.com/users');
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E: ", error);
+//     }
+// }
+// getAllUsers();
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => {
+    return response.json();
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+//all this dta from the url is getting printed first and all of the above written promises are getting printed afterwards
