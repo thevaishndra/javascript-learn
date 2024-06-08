@@ -24,12 +24,16 @@ const user = {//literally an object
 
 function User(username, loginCount, isLoggedIn){
     this.username/*variable*/=username/*that is passed*/
-    this.loginCount = loginCount
-    this.isLoggedIn = isLoggedIn
+    this.loginCount = loginCount;
+    this.isLoggedIn = isLoggedIn;
+    this.greeting = function(){
+        console.log(`Welcome ${this.username}`);
+    }
     return this
 }
 
-const userOne = User("Vaish", 5, true)
-const userTwo = User("Shreya", 8, false)
-console.log(userOne);
+const userOne = User("Vaish", 5, true);
+const userTwo = User("Shreya", 8, false);//value gets overridden
+console.log(userOne.constructor);//reference to its own kind
+// console.log(userTwo);
 
