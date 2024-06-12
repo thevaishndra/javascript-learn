@@ -42,4 +42,25 @@ let  charSpecial = {
 Object.prototype.vaish = function(){
     console.log(`vaish is omnipresent in all objects`)
 }
-charSpecial.vaish()
+
+
+Array.prototype.heyVaish = function(){
+    console.log(`Vaish says hello`)
+}
+// charSpecial.vaish()
+// cartoonChar.vaish()
+// cartoonChar.heyVaish()
+// charSpecial.heyVaish()
+
+//INHERITANCE
+const Teacher = {
+    makeVideo: true
+}
+const TeacherSupport = {
+    isAvailable: false
+}
+const TASupport = {
+    makeAssignment : 'JS Assignment',
+    fullTime: true,
+    __proto__
+}
