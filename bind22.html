@@ -16,7 +16,8 @@
             //requirement
             document
             .querySelector('button')
-            .addEventListener('click', this.handleClick.bind(this))//manually binds, when sometimes code doesn't work
+            .addEventListener('click', this.handleClick.bind(this).//manually binds, when sometimes code doesn't work
+            bind(this))//not only just pass reference but attach it
         }
         handleClick(){
             console.log("button clicked")
