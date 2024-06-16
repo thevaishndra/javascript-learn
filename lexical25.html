@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+        //lexical scoping
+        // function init() {
+        //     let name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     displayName();
+        // }
+        // init();
+
+        // function outer() {
+        //     let username = "householder"
+        //     console.log("OUTER", secret);//don't have access
+        //     function inner() {
+        //         let secret = "my123"
+        //         console.log("inner", username);
+        //     }
+        //     function innerTwo() {
+        //         console.log("innerTwo", username);
+        //         console.log(secret);//doesn't get access, sibling
+        //     }
+            //gets access, parent
+        //     inner()
+        //     innerTwo()
+        // }//function inside function: gets access to everything
+        // outer()
+        // console.log("TOO OUTER", username);
+
+
+        //closure
+        function makeFunc() {
+            const name = "Mozilla";
+            function displayName() {
+                console.log(name);
+            }
+            return displayName;//not only function gets return, the whole scope {lexical scope} gets return
+        }
+        const myFunc = makeFunc();
+        myFunc();
+
+    </script>
+    <script>
+        document.getElementById('orange').onclick = function() {
+            document.body.style.backgroundColor = `orange`
+        }
+        document.getElementById('green').onclick = function() {
+            document.body.style.backgroundColor = `green`
+        }
+        //what if we have too many buttons and for each button there is different color, it is aginst dry principle: don't repeat yourself
+        function clickHandler(color) {
+            // document.body.style.backgroundColor = `${color}`//this doen't work as reference cam't be passed
+            return function() {//so we made function, and function can be returned we studied in lexical scoping and closure
+                document.body.style.backgroundColor = `${color}`//here it has the access to outer function and our code will work now
+            }
+        }
+        document.getElementById('orange').onclick = clickHandler('orange')//reference doesn't work
+        document.getElementById('green').onclick = clickHandler('green')
+    </script>
+</body>
+</html>
