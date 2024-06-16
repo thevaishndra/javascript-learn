@@ -1,7 +1,7 @@
 const descriptor = Object.getOwnPropertyDescriptor(Math, "PI")
 console.log(descriptor);
 //console.log(Math.PI);
-//Math.PI = 5;
+//Math.PI = 5;//we can change the value of pi by doing getOwnpropertyDescriptor
 ////console.log(Math.PI);
 
 const cake = {
